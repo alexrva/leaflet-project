@@ -1,17 +1,24 @@
-DROP TABLE missing_persons
+DROP TABLE missing_persons;
 
 CREATE TABLE missing_persons (
-	age INT NOT NULL,
-	city_last_seen VARCHAR (50) NOT NULL,
-	first VARCHAR (50) NOT NULL,
-	middle VARCHAR (50) NOT NULL,
-	last VARCHAR (50) NOT NULL,
-	image VARCHAR (75) NOT NULL, 
-	county_last_seen VARCHAR (50) NOT NULL,
-	race VARCHAR (50) NOT NULL,
-	date_last_seen DATE NOT NULl,
-	state_last_seen VARCHAR (50) NOT NULL,
-	gender VARCHAR (50) NOT NULL,
-	lat_long INT NOT NULL
+	age varchar(500),
+	city_last_seen VARCHAR (500) ,
+	first VARCHAR (500) ,
+	middle VARCHAR (500),
+	last VARCHAR (500) ,
+	image VARCHAR (750), 
+	county_last_seen VARCHAR (500),
+	race VARCHAR (500) ,
+	date_last_seen VARCHAR(500),
+	state_last_seen VARCHAR (500),
+	gender VARCHAR (500) ,
+	lat_long VARCHAR (500)
 	
 );
+
+
+COPY missing_persons(age,city_last_seen,first,middle,last,image,county_last_seen,race,date_last_seen,state_last_seen,gender,lat_long)
+FROM '/Users/hannah-janehuntoon/git/leaflet-project/cleaned_csv.csv' DELIMITER ',' CSV HEADER;
+
+
+select * from public.missing_persons;

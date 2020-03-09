@@ -8,18 +8,22 @@
     <title>Missing Persons Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
    
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"> </script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-core.min.js"></script>
+   
+    
 
     <!-- Custom styles for this template -->
-    <link href="static/css/dashboard.css" rel="stylesheet">
+
     <link href = "style.css" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Missing Persons</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Missing Persons Dashboard</a>
         
        
             </li>
@@ -46,7 +50,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="graphs.html">
                                 <span data-feather="bar-chart-2"></span>
-                                Graphs
+                                Bar Graphs
                             </a>
                         </li>
                         <li class="nav-item">
@@ -63,6 +67,7 @@
                         </li>
                        
                     </ul>
+                    
 
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -77,14 +82,27 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Graphs</h1>
+                    <h1 class="h2">Bar Graphs</h1>
                 
                 </div>
-                <div id="chartDiv" style="width:600px;height:5px;"></div>
-                <img src="XX" class="center" width="450" height="225">
+
+               
                 
-                <p>This website displays missing persons data in the United States. We've created multiple data visualizations breaking down this data. We've created a bar graph that shows the differences of race and ethnicity among missing persons. We've also created a line chart that shows the number of missing persons to show change over time. Finally, we've created two diffrent maps for additional information - a heat map and a map with markers. Explore our site to find more information about missing persons in the U.S.
+                <div id="bar-plot"></div>
+                <script src="graphsplot.js"></script>
+
+                <p> Below we have two interactive bar charts - the first one displays the number of missing persons for each of the 50 states and US territories. 
+                    If you mouseover each bar you will see the exact number of missing persons from that state. 
+                    California has the highest number of missing persons with just over 1,450. 
+                    Florida and Texas are the next highest states each with over 870 missing persons. 
+                    It's important to keep in mind that these three states are the most populated states. 
+                    The territory with the lowest number of missing persons is Northern Mariana Islands with only 2 people reported missing. 
+                    The second bar chart shows the breakdown of gender - either male or female. 
+                    There are over 6,200 missing males whereas there are just under 3,800 missing females in our dataset.
                 </p>
+                
+                <div id="bar-plot2"></div>
+                <script src="graphsplot2.js"></script>
                 
                 <div class="table-responsive" id="tableDiv"></div>
             </main>
@@ -92,9 +110,8 @@
     </div>
 
 
-    <div id="bar-plot"></div>
-        <script src="graphsdata.js"></script>
-        <script src="graphsplot.js"></script>
+   
+    
     
 
     <!-- Bootstrap core JavaScript
@@ -111,7 +128,7 @@
         crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="/static/js/app.js"></script>
+    <!-- <script src="/static/js/app.js"></script> -->
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>

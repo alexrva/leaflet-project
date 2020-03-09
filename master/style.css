@@ -3,7 +3,6 @@
     display: block;
     margin: 10px auto 10px auto;
 }
-
 body {
     padding: 0;
     margin: 0;
@@ -14,3 +13,32 @@ body,
 html {
     height: 200%;
 }
+svg {
+  color: black;
+}
+
+.my-tooltip {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    padding: 2px;
+    font: 12px sans-serif;
+    text-align: center;
+    color: white;
+    background: gray;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .my-tooltip1 {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    padding: 2px;
+    font: 12px sans-serif;
+    text-align: center;
+    color: white;
+    background: gray;
+    border: 0;
+    border-radius: 10px;
+  }

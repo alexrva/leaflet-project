@@ -10,13 +10,13 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="static/css/dashboard.css" rel="stylesheet">
+    
     <link href = "style.css" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Missing Persons</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Missing Persons Dashboard</a>
         
        
             </li>
@@ -43,7 +43,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="graphs.html">
                                 <span data-feather="bar-chart-2"></span>
-                                Graphs
+                                Bar Graphs
                             </a>
                         </li>
                         <li class="nav-item">
@@ -74,15 +74,19 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Purpose</h1>
+                    <h1 class="h2">Missing Persons in the U.S.</h1>
                 
                 </div>
-                <div id="chartDiv" style="width:600px;height:5px;"></div>
+                <div id="chartDiv" style="width:1500px;height:5px;"></div>
                 <div><img class="center" src="./Images/missing.jpg" width="450" height="225">
                 </div>
-                <p>This website displays missing persons data in the United States. We've created multiple data visualizations breaking down this data. We've created a bar graph that shows the differences of race and ethnicity among missing persons. We've also created a line chart that shows the number of missing persons to show change over time. Finally, we've created two diffrent maps for additional information - a heat map and a map with markers. Explore our site to find more information about missing persons in the U.S.
+                <p>This website highlights data from the The National Missing and Unidentified Persons System in the United States. 
+                    We've created multiple data visualizations to help break down the data and gain real time insights. 
+                    We've created two bar graphs - one that shows the number of missing persons by state/territory and one that shows the number of missing persons by gender. 
+                    We've also created two diffrent types of maps - a heat map showing the hot spots where people have gone missing and an interactive map with markers that allows you to click for more info.
+                    Explore our site by using the navigation buttons on the left side of the page. 
                 </p>
-                <h2>Dashboard - Quick View</h2>
+                
                 <div class="table-responsive" id="tableDiv"></div>
             </main>
         </div>
@@ -102,7 +106,7 @@
         crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="/static/js/app.js"></script>
+    <!--script src="/static/js/app.js"></script> -->
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
